@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FROM</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+
+      <div>
+        <legend>폼연습</legend>
+        <label for="tv">tv</label>
+        <input type="checkbox" id="tv">
+        <label for="news">뉴스</label>
+        <input type="checkbox" id="news">
+      </div>
+
+      <div>
+        <p>
+          라디오버튼<br>
+          라디오버튼을 그룹으로 묶을 때 name 값을 동일하게
+        </p>
+      </div>
+
+      <div>
+        <label for="shipping1">배</label>
+        <input type="radio" id="shipping1" name="shipping" checked>
+        <!--checked = "배" 가 자동 선택되도록 함  -->
+        
+        <label for="shipping2">비행기</label>
+        <input type="radio" id="shipping2" name="shipping">
+        
+        <label for="shipping3">기차</label>
+        <input type="radio" id="shipping3" name="shipping">
+      </div>
+
+      <div>
+        <input type="reset" value="취소">
+        <input type="submit" value="확인">
+        <input type="file" >
+      </div>
+    
+    </fieldset>
+  </form>
+</body>
+</html>
