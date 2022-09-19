@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블-col</title>
+</head>
+<body>
+  <h1>테이블 컬럼지정</h1>
+  <p>
+    emmet 부모>자식
+    emmet 형제 + 바로 뒤 형제
+  </p>
+  <p>
+    caption > colgroup   caption 부모 colgroup 자식  </p>
+    <p>caption + colgroup   caption 형 colgroup 동생</p> 
+
+  <!-- table>coption+colgroup>col*3 -->
+  <table border="1" width="80%">
+    <coption>테이블의 제목</coption>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <!-- 3줄 3칸 = tr*3>td*3 -->
+    <!-- 3줄 3칸 내용채우기  = tr*3>td*3>{내용} -->
+
+    <!-- 1줄 제목셀 3개 / 2,3줄 제목셀 1칸, 데이터셀 2,3칸 -->
+    <!-- 방법 1. 1줄씩 풀어쓰기
+    1줄 제목셀 3개 = tr>th*3>{내용}
+    2,3줄 = tr*2 
+    2.3줄 제목셀 1칸 = th
+    데이터셀 2,3칸 = td*2
+    1칸 제목셀 th / 다음형제 2번째칸 데이터셀 / 다음형제 3번째칸 데이터셀
+    th+td+td = th+td*2 
+    -->
+    <tr>
+      <th>내용</th>
+      <th>내용</th>
+      <th>내용</th>
+    </tr>
+    <tr>
+      <th></th>
+      <td>내용</td>
+      <td>내용</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>내용</td>
+      <td>내용</td>
+    </tr>
+  </table>
+
+<hr>
+<table>
+    <!-- 1줄 제목셀 3개 / 2,3줄 제목셀 1칸, 데이터셀 2,3칸 -->
+    <!-- 방법 2. 한번에 쓰기 -->
+
+    <!-- caption + colgroup   caption 형 colgroup 동생  -->
+    <caption></caption>
+    <colgroup>
+       <!-- col 3개 = col*3 -->
+       <col>
+       <col>
+       <col>
+    </colgroup>
+    <tr>
+      <th>제목</th>
+      <th>제목</th>
+      <th>제목</th>
+    </tr>  
+<!-- 1줄 제목셀 3개 / 2,3줄 제목셀 1칸, 데이터셀 2,3칸 -->
+    <!-- 방법 2. 한번에 쓰기 -->
+    <!-- tr*2>th+td*2>{내용} -->
+    <tr>
+      <th></th>
+      <td>내용</td>
+      <td>내용</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>내용</td>
+      <td>내용</td>
+    </tr>
+
+  </table>
+
+
+
+</body>
+</html>
