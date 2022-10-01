@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform_2</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{margin: 50px; background-color: #ccc;
+      /*float 된 자식을 인식*/
+    overflow: hidden;}
+    .wrap::after{
+      content: ''; display: block; clear: both;
+    }
+    .box{
+      /*inline-bloc = 인라인 텍스트 취급함*/
+      /* display: inline-block; */
+      float: left;
+      width: 25%; 
+      /* background-color: #999; */
+      /* border:1px solid #000; */
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .box.box-inner{
+      height: 200px;
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .box.box$*8>box-inner>{box$} -->
+    <div class="box box1">
+      <box-inner>box1</box-inner>
+    </div>
+    <div class="box box2">
+      <box-inner>box2</box-inner>
+    </div>
+    <div class="box box3">
+      <box-inner>box3</box-inner>
+    </div>
+    <div class="box box4">
+      <box-inner>box4</box-inner>
+    </div>
+    <div class="box box5">
+      <box-inner>box5</box-inner>
+    </div>
+    <div class="box box6">
+      <box-inner>box6</box-inner>
+    </div>
+    <div class="box box7">
+      <box-inner>box7</box-inner>
+    </div>
+    <div class="box box8">
+      <box-inner>box8</box-inner>
+    </div>
+  </div>
+</body>
+</html>
