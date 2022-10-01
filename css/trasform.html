@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform.</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .section{
+      position: relative; /*.slogan 기준요소*/
+      /*.section 브라우저 가득*/
+      width: 100vw;
+      height: 100vh;
+      /* 4개 백그라운드 태그 1줄로 요약 쓰기
+      background-image: url(background/images/bg.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    } */
+    background: url(background/images/bg.jpg) no-repeat center/cover;}
+    .section.slogan{
+      /* 블록요소 수평, 수직 가운데로 이동시키기 */
+      position: absolute; /* 기준요소 지정 */
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%); /* 본인 r요소크기의 수평, 수직 이동*/
+      padding: 25px 50px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .section.slogan span{
+      display: block;
+      color: #fff;
+      text-align: center;
+    }
+    .section.slogan.title{
+      display: block;
+      color: #fff;
+      text-align: center;
+    }
+    .section.slogan.desc{
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="section">
+    <div class="slogan"> </div>
+    <title>title TITLE Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat distinctio quos illo ipsa. Sed magnam veniam, ut distinctio necessitatibus voluptas? Nemo vitae aut facilis deleniti inventore. Assumenda non exercitationem ea!</title>
+
+  </div>
+
+</body>
+</html>

@@ -5,11 +5,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>선택자연습</title>
+  <style>
+    /* #아이디 */
+    #section{
+      background-color: #fff;
+    }
+    .box{color: blue;}
+  </style>
 </head>
 <body>
 <!-- div#wrap
 태그#아이디명
-#아이디명 -->
-<div id="warp"></div>
+#아이디명 #warp 만써도 div id="warp" 이라고 써짐 -->
+<div id="warp">
+  <header>헤더</header>
+  <!-- .container -->
+  <div clss="container">
+    <!-- section#section$*3-->
+     <section id="section1"> 
+      <p>내용</p>
+      <div class="box"> 
+        <h1>섹션제목</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam odio beatae harum magni ducimus fuga reiciendis nulla voluptatem? Blanditiis cupiditate quae dolorum ad odit voluptate illum. Molestias vero possimus repudiandae.</p>
+      <p>동생</p></section>
+     <section id="section2">
+      <!-- p+.box -->
+      <p>내용</p>
+      <div class="box">
+        <!-- h1+p+p -->
+        <!-- h1+p*2 -->
+        <h1>섹션제목</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam odio beatae harum magni ducimus fuga reiciendis nulla voluptatem? Blanditiis cupiditate quae dolorum ad odit voluptate illum. Molestias vero possimus repudiandae.</p>
+        <p>동생</p>
+      </div>
+     </section>
+     <section id="section3"> 
+      <p>내용</p>
+      <div class="box"> 
+        <h1>섹션제목</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam odio beatae harum magni ducimus fuga reiciendis nulla voluptatem? Blanditiis cupiditate quae dolorum ad odit voluptate illum. Molestias vero possimus repudiandae.</p>
+      <p>동생</p></section>
+  </div>
+  <footer>푸터</footer>
+
+  <!-- //#wrap -->
+</div>
 </body>
 </html>
