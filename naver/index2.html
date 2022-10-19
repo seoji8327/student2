@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>naver corp bxslider</title>
-  <link rel="stylesheet" href="src/css/jquery.bxslider.css">
+  <title>navercorp - swiper</title>
+  <link rel="stylesheet" href="src/css/swiper8.4.3-bundle.min.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -397,33 +397,75 @@
   <!-- //header -->
   <!-- 본문 .container -->
   <div class="container">
-    <!-- 슬라이드 .main_slide -->
-    <div class="main_slide">
-      <div>
-        <div>
-          <a href="https://1784.navercorp.com" target="_blank" class="slide_info_box" >
-            <h2 class="slide_logo">
-              <span class="blind">네이버 1784</span></h2>
-            <div class="slide_text_box">
-              <p class="slide_title">
-                <strong>네이버 1784에서<br>우리는 혁신을 현실로 만들고 있습니다.</strong></p>
-              <p class="slide_text">
-                <span>네이버의 다양한 기술들로 실험과 도전, 융합을 통해<br>새로운 기회와 가능성을 만들어 갑니다.</span></p>
-            </div>
-          </a>
+    <!-- .swiper.mySwiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide7.jpg" /></div>
         </div>
-        <div><img src="img/main/img_main_slide7.jpg" /></div>
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide9.jpg" /></div>
+        </div>
+        <div class="swiper-slide">
+          <div></div>
+          <div><img src="img/main/img_main_slide10.jpg" /></div>
+        </div>
       </div>
-      <div>
-        <div></div>
-        <div><img src="img/main/img_main_slide9.jpg" /></div>
-      </div>
-      <div>
-        <div></div>
-        <div><img src="img/main/img_main_slide10.jpg" /></div>
-      </div>
+      <!-- //.swiper-wrapper -->
+      <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
     </div>
-    <!-- //슬라이드  .main_slide-->
+    <!-- //슬라이드  .swiper.mySwiper-->
+    <!-- .main_content -->
+    <div class="main_content">
+      <ul class="content_summary">
+          <!-- li.summary_container*4>h3.summary_title+.text_wrap>p.title_text>strong^p.desc_text^a.summary_link -->
+          <li class="summary_container news">
+            <h3 class="summary_title">NEWS</h3>
+            <div class="text_wrap">
+              <p class="title_text"><strong>네이버클라우드, 인텔과 동남아 클라우드 시장 진출 위한 협력 강화</strong></p>
+              <p class="desc_text">
+							네이버클라우드, 인텔과 동남아 클라우드 시장 진출 위한 협력 강화 
+              - 동남아 MSP 모색 및 인텔 파트너와 현지 진출 통한 공동 개발 체계 형성
+              - 네이버클라우드 스타트업 지원 프로그램 내 인텔과의 네트워크 기회 확대 2022-10-12 (사진설명) 인텔 아태 지역 총괄 부사장 스티브 롱(왼쪽)과 네이버클라
+              </p>
+            </div>
+            <a href="" class="summary_link">바로가기</a>
+          </li>
+          <li class="summary_container careear">
+            <h3 class="summary_title">career</h3>
+            <div class="text_wrap">
+              <p class="title_text"><strong>수 많은 사용자의 목소리에서<br>내 일의 자부심과 무게를 느낍니다.</strong></p>
+              <!-- <p class="desc_text"></p> -->
+            </div>
+            <a href="" class="summary_link">네이버에서 일한다는 것</a>
+          </li>
+          <li class="summary_container stock1">
+            <h3 class="summary_title">stock</h3>
+            <div class="text_wrap">
+              <p class="price">161,500<span class="unit">원</span></p>
+              <span class="figure type2">3,000</span>
+              <p class="date">KRX 2022.10.12</p>
+            </div>
+            <a href="" class="summary_link">주가정보</a>
+          </li>
+          <li class="summary_container stock2">
+            <h3 class="summary_title">결산공고</h3>
+            <div class="text_wrap">
+              <p class="title_text"><strong>>네이버의 재무상태표를 확인<br class="break"> 할 수 있습니다.</strong></p>
+              <!-- <p class="desc_text"></p> -->
+            </div>
+            <a href="" class="summary_link">결산공고 보러가기</a>
+          </li>
+      </ul>
+      <!-- //.content_summary -->
+      <div class="content_service"></div>
+      <div class="content_support"></div>
+    </div>
+    <!-- //.main_content -->
   </div>
   <!-- //본문  //.container-->
 
@@ -433,28 +475,26 @@
   </footer>
 
 
-  <!-- jquery 연결 -->
-  <script src="src/vendor/jquery-3.1.1.min.js"></script>
-  <!-- bxslide 플러그인 연결 -->
-  <script src="src/js/jquery.bxslider.js"></script>
-  <!-- bxlide 적용 -->
+  <!-- swiper 플러그인 연결 -->
+  <script src="src/js/swiper8.4.3-bundle.min.js"></script>
+  <!-- swiper적용 -->
   <script>
-    $(document).ready(function(){
-      $('.main_slide').bxSlider({
-        // mode: 'horizontal',  //움직이는 방향 수평
-        //mode: 'vertical', //움직이는 방향 수직
-        mode:'fade',   //슬라이드 페이드인 아웃
-        moveSlides: 1,    //한번에 움직일 슬라이드 수
-        infiniteLoop: true, //무한루프
-        // slideWidth: 660,  슬라이드의 크기 지정
-        //minSlides: 2, 한번에 보여질 슬라이드 수
-        //maxSlides: 2, 한번에 보여질 슬라이드 수
-        speed: 400,
-        auto: true,
-        // autoControls: true,
-        stopAutoOnClick: true,
-      });
-    });
+    var swiper1 = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    }); 
+   
   </script>
 </body>
 
