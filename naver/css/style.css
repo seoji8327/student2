@@ -1,10 +1,13 @@
 @charset "UTF-8";
-
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css");
+/* font-family:'NanumSquare','NanumBarunGothic', 'Nanum Gothic', sans-serif; */
+/* <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet"> */
 /*reset*/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  /* background-color: #000; */
 }
 
 a,
@@ -45,8 +48,10 @@ input,
 textarea,
 select,
 button {
-  font-family: "NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial",
-    "AppleSDGothicNeo", sans-serif;
+  /* font-family:'NanumSquare', 'NanumBarunGothic', 'Nanum Gothic', sans-serif; */
+  font-family: "NanumSquare", "NanumBarunGothic", "Nanum Gothic", "NanumSquare",
+    "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo",
+    sans-serif;
   font-size: 14px;
 }
 
@@ -93,7 +98,7 @@ em {
   font-weight: normal;
 }
 
-/*공통*/
+/****  공통  ****/
 .blind {
   position: absolute;
   /* clip: rect(0 0 0 0); */
@@ -119,8 +124,8 @@ em {
 }
 
 .chinese {
-  font-family: "NanumBarunGothic", "나눔바른고딕", "Dotum", "돋움", "Helvetica",
-    "Arial", "AppleSDGothicNeo", sans-serif;
+  font-family: "NanumSquare", "NanumBarunGothic", "나눔바른고딕", "Dotum",
+    "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
 }
 
 .text_line {
@@ -206,33 +211,46 @@ html {
   font-style: normal;
   line-height: 1.4;
   -webkit-text-size-adjust: none;
-  background-color: #ccc;
 }
 
-/* 변수선언 */
+/**** 변수선언 ****/
 body {
   --naver-color: #1ec545;
   --header-height: 80px;
 }
 
-/* 레이아웃 */
+/****  레이아웃 ****/
 header {
   position: relative;
   height: var(--header-height);
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.main_content{}
+
+footer{
+  background-color: rgba(0,0,0, 0.3);
+}
+
+header .header_wrap, 
+footer .footer_wrap{
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+
+/**
+header
+**/
 header .header_wrap {
   display: flex;
   justify-content: space-between;
   /*양끝정렬 여백균등*/
   align-items: center;
-  /*교차축 가운데*/
-  margin: 0 auto;
-  max-width: 1600px;
+  /* 교차축 가운데 */
 }
 
-/* header */
 .header_logo {
   background: url(../img/header_logo.png) center no-repeat;
   width: 87px;
@@ -246,8 +264,11 @@ header .header_wrap {
   width: 100%;
   height: 100%;
 }
+/************* //공통 *************/
 
-/* nav */
+/*********************************************************************
+  NAV [nav,상단 슬라이드배너]
+*********************************************************************/
 nav {
 }
 
@@ -424,6 +445,454 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   width: 100%;
 }
 
+/*********************************************************************
+  4단 게시판 놓기 [news/career/stock/결산공고]
+*********************************************************************/
+
+/* .main_content */
+.main_content {
+  margin-top: 150px;
+  padding: 0 150px 120px;
+}
+.main_content ul.content_summary {
+  display: flex;
+  /* flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch; */ /*display: flex 선언 시 기본값으로 따로 써주지 안아도 자동 적용됨*/
+}
+.content_summary li.summary_container {
+  flex-basis: 25%;
+  width: 25%; /*컨테이너의 가로크기에 문제가 생길때 해당 태그를 쓰면 해결된다*/
+  /* flex-grow: 0;
+  flex-shrink: 1; */
+  padding: 0 50px;
+  position: relative; /*기준-1*/
+}
+.content_summary li.summary_container:first-child{
+padding-left: 0px;
+} 
+.content_summary li.summary_container::after {
+content: "";
+position: absolute; /*선택-1*/
+right: 0; top: 0;
+width: 1px; height: 100%;
+background-color: #959595;
+}
+.content_summary li.summary_container:last-child:after {
+  display: none;
+}
+
+.content_summary h3 {
+  font-family: "NanumSquare", "Nanum Gothic", sans-serif ;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.content_summary .text_wrap {
+  height: 76px;
+  margin: 31px 0 30px;
+}
+.content_summary .text_wrap .title_text {
+  width: 100%;
+  /* margin: 30px 0; */
+}
+.content_summary .text_wrap .title_text strong {
+  display: block;
+  white-space: nowrap; /*말줌일표 지정 시작*/
+  overflow: hidden;
+  text-overflow: ellipsis; /*말줄임표 지정 끝*/
+  font-weight: 700;
+}
+.content_summary .text_wrap .desc_text {
+  /* margin-bottom: 30px; */
+  display: -webkit-box; /*2줄이상의 상태 말줄임 시작*/
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /*2줄이상의 상태 말줄임 끝*/
+  margin-top: 10px;
+}
+
+/* '바로가기'글자 설정 */
+.content_summary a.summary_link {
+  position: relative; /*.content_summary a.summary_link .icon_arrow 의 기준요소 지점이다.*/
+  padding-right: 40px;
+  font-weight: 700;
+  color: #000;
+}
+/*'바로가기' 글자 후버 시 아랫줄 표시*/
+.content_summary a.summary_link:hover {
+  text-decoration: underline;
+}
+/* '바로가기 글자 옆에 화살표' 초록동그라미로 변경되기 */
+.content_summary a.summary_link span.icon_arrow {
+  position: absolute; /*일반흐름에서 제외하기 -> position: absolute 적용 시 기준요소 지점을 정해줘야 한다!*/
+  right: 0;
+  top: 0;
+  display: block; /*width를 지정하기*/
+  width: 18px;
+  height: 18px;
+  border-radius: 50%; /*사각형 -> 동그라미 변경해주는 태그*/
+}
+/*'바로가기 글자 옆 화살표' 이미지 가져오기 및 위치 조정 */
+.content_summary a.summary_link span.icon_arrow:after {
+  content: "";
+  position: absolute; /*-> 기준요소는? -> */
+  left: 50%;
+  top: 50%; /*부모 요소의 가운데서 시작*/
+  transform: translate(-50%, -50%); /*자기의 크기 반만큼 이동*/
+  width: 5px;
+  height: 8px; /*after, before 의 크기지정*/
+  background: url(../img/sprite.png) no-repeat;
+  background-position: -102px -50px;
+}
+/*'바로가기 글자 옆 초록동그라미' 색상지정 */
+.content_summary a.summary_link:hover span.icon_arrow {
+  background-color: var(--naver-color);
+}
+.content_summary a.summary_link:hover span.icon_arrow:after {
+  background-position: -108px 49px;
+}
+
+/*career '수 많은...느낍니다.' 글자 지정 */
+.content_summary .career .text_wrap  {
+  font-size: 18px;
+  display: -webkit-box; /*3줄이상의 상태 말줄임 시작*/
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /*3줄이상의 상태 말줄임 끝*/
+}
+
+/*'네이버에서 일한다는 것' 폰트사이즈, 위치조정*/
+.content_summary .career a.summary_link {
+  font-size: 14px;
+  position: relative;
+  top: 0px;
+}
+.content_summary .stock1 {
+}
+
+/*161,500의 숫자를 크게, 굵게 만들기*/
+.content_summary .stock1 .price {
+  font-size: 36px;
+  letter-spacing: -1.7px; /*자간*/
+  border-bottom: 1px solid #000;
+}
+/*'원'자 만 12포인트로 작게 만들기*/
+.content_summary .stock1 .price .unit {
+  /*.unit = '원'자만 선택됨*/
+  font-size: 12px;
+}
+/*3,000 숫자를 161,500원과 같은줄에 놓기*/
+.content_summary .stock1 .text_wrap {
+  position: relative;
+}
+/*'3,000' 위치 조정하기*/
+.content_summary .stock1 .text_wrap .figure {
+  position: absolute; /*-> 기준요소는? = .content_summary .stock1 .text_wrap 이다 */
+  top: 26px;
+  right: 0%;
+}
+/*'krx2022.10.12' 위치조정 하기*/
+.content_summary .stock1 .text_wrap .date {
+  text-align: right;
+  margin-top: 12px;
+}
+/*'주가정보' 폰트 위치 조정하기_border-box 아랫줄에 맞추기*/
+.content_summary .stock1 .text_wrap a.link {
+  top: 0px;
+}
+/*'결산공고' 폰트 사이즈 조정하기*/
+.content_summary .stock2 {
+  font-size: 18px;
+}
+/*'결산공고 보러가기' 폰트 사이즈 조정*/
+.content_summary .stock2 .text_wrap {
+  font-size: 14px;
+}
+/* .main_content .content_service{} */
+
+
+/*********************************************************************
+  6개 이미지바둑판 [N로봇,clova노트..등]
+*********************************************************************/
+
+/* .content_service */
+.main_content .content_service {
+  margin-top: 150px;
+}
+.service_list_container {
+  display: flex;
+  flex-wrap: wrap; /*플렉스 아이템의 줄바꿈*/
+}
+
+/*단(column)의 크기는 플렉스 아이템*/
+.service_list_container li.service_thumbnail_box {
+  /* flex-basis: 33.33%; */
+  /* flex: 0 1 33.33%; */
+  /* 플렉스 아이템의 후손의 크기가 플렉스 아이템보다 클경우를 생각해서 
+     flex-direction : row경우 width를 지정
+     flex-direction : column경우 height를 지정*/
+  width: 33.33%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/**/
+/* li.service_thumbnail_box a.thumbnail_dimmed =li.service_thumbnail_box a*/
+li.service_thumbnail_box a {
+  position: relative;
+  color: #fff;
+}
+
+li.service_thumbnail_box a:after {
+  content: "";
+  display: block;
+  position: absolute; /*<-선택항목, 기준요소=li.service_thumbnail_box a이다*/
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(8, 21, 88, 0.5);
+  opacity: 0;
+  transition: opacity 02s;
+  z-index: 10;
+}
+li.service_thumbnail_box:hover a:after {
+  opacity: 1;
+}
+
+/* ↓ 가변 이미지 크기 지정*/
+li.service_thumbnail_box .thumbnail {
+  /*-> li.service_thumbnail_box요소에서 마우스 아웃 상태일때의 thumbnail*/
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+li.service_thumbnail_box:hover .thumbnail {
+  /*-> li.service_thumbnail_box요소에서 마우스 hover 상태일때 thumbnail*/
+  transform: scale(1.1);
+}
+
+li.service_thumbnail_box .thumbnail img {
+  width: 100%;
+  height: auto;
+}
+li.service_thumbnail_box .description {
+  position: absolute; /*일반흐름제외*/
+  z-index: 20;
+  width: 100%; /*너비를 지정하지 않을경우 너비-자식, 후손크기 높이-자식, 후손크기 
+  너비를 지정한 기준요소의 너비-기본요소의 너비에서 높이-자식, 후손크기*/
+  left: 0;
+  bottom: -300px;
+  transition: bottom 0.5s;
+  padding: 50px 30px 30px; /*→ 초록화살표&텍스트 2줄의 여백지정(N로봇,가장최신의..)*/
+
+  /*아이콘 개별작업 했을때
+  background: no-repeat url() 30px 0px; -> 백그라운드로 불러오기& 위치지정
+  background-size: 30px 30px; -> 아이콘 크기지정 */
+
+  /*아이콘들이 sprite 했을때는  ":after"에 적용하기
+  background : no-repeat url(../img/sprite.png) 30px 0px;  */
+}
+
+li.service_thumbnail_box:hover .description {
+  bottom: 0;
+}
+
+li.service_thumbnail_box .description::after {
+  content: "";
+  display: block;
+  position: absolute; /*선택항목, 기준은 li.service_thumbnail_box .description 이다*/
+  left: 30px;  top: 0px; /*웹 브라우저 내 보이는 아이콘의 위치 지정*/
+  width: 23px;  height: 23px; /*아이콘 크기*/
+  background: no-repeat url(../img/sprite.png);
+  background-position: -199px -129px; /*sprite 내 해당 아이콘의 위치*/
+}
+
+li.service_thumbnail_box .description .title_text {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+li.service_thumbnail_box .description .desc_text {
+  font-size: 18px;
+  overflow: hidden; /*한줄 말줄임*/
+  text-overflow: ellipsis;
+  white-space: nowrap; /*//한줄 말줄임*/
+}
+
+
+/*********************************************************************
+  글과 4단 바로가기 [기술로 다양성을 꽃피우는 플랫폼...]
+*********************************************************************/
+
+/* .main_content .content_support{} */
+.main_content .content_support{  
+  margin-top: 150px;  /* .content_support 위 바깥여백 150px */
+  text-align: center; /*인라인요소, 텍스트 가운데 정렬하기*/
+}
+.content_support .support_title{
+  position: relative; /*★★★*/
+  font-size: 32px; color: #333; /*폰트 32px, 색상 #333*/
+  padding-bottom: 20px;
+  margin-bottom: 20px; /*아래여백 20px*/
+}
+.content_support .support_text{
+  font-size: 18px;  color: #333; line-height: 1.6;
+}
+  
+.content_support .support_title::after{ /*초록 줄*/
+  content: ""; /*★★★*/
+  position: absolute; /*★★★*/
+  left: 50%; bottom: 0%; /*★★★*/
+  width: 5rem; height: 2px;
+  background-color: var(--naver-color);
+  transform: translatex(-50%); /*★★★ x좌표로 본인 크기의 반이 왼쪽으로 이동 하기★★★*/
+}
+  .content_support ul.support_list_container{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row; /* 플랙스 선언시 자동 선언됨*/ 
+    flex-wrap: nowrap; 
+    justify-content: start; 
+    align-content: stretch; /* //플랙스 선언시 자동 선언됨*/
+  }
+  .content_support li.support_list_box{
+    width: 25%;  /* = flex: 0 0 25; = flex-basis: 25%;*/
+    flex-basis: 50%;
+    box-sizing: border-box;
+    position: relative; /*기준-1*/
+  }
+  .content_support li.support_list_box::after{ /*칸막이*/
+    content: "";
+    position: absolute; /*선택-1*/
+    right: 0; top: 0;
+    width: 1px; height: 100%;
+    background-color: #959595;
+  }
+  .content_support li.support_list_box:nth-child(4):after{ /*마지막 칸막이 감춤*/
+display: none;
+  }
+
+  .content_support li.support_list_box a{
+    /*bgi용 적용태그*/
+    display: block;
+    padding: 135px 10px 0; 
+    position: relative;
+  }
+
+  .content_support li.support_list_box a::after{
+    content: "";
+    position: absolute;
+    left: 50%; top: 0%; 
+    /* x좌표로 본인 크기의 반이 왼쪽으로 이동 */
+    transform: translatex(-50%); /*★★★ x좌표로 본인 크기의 반이 왼쪽으로 이동 하기★★★*/
+    background: transparent  no-repeat url(../img/sprite.png);
+    height: 100px;
+    /* 높이를 지정하지 않으면 자식 요소의 높이만큼 온다 */
+  }
+  .content_support  li.support_list_box:nth-child(1) a::after{
+    width: 87px; 
+    background-position:0 -957px;}
+  .content_support  li.support_list_box:nth-child(2) a::after{
+    width: 101px; 
+    background-position:-92px -957px;}
+  .content_support  li.support_list_box:nth-child(3) a::after{
+    width: 110px; 
+    background-position:-199px -957px;}
+  .content_support  li.support_list_box:nth-child(4) a::after{
+    width: 93px; 
+    background-position:-316px -957px;}
+
+  .content_support li.support_list_box a .title_text{
+    color: var(--naver-color);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  /*a태그에 hover하면 dt.title_text에 밑줄 적용하기*/
+  .content_support a:hover dt.title_text{
+    text-decoration: underline;
+  }
+
+  .content_support li.support_list_box .desc_text{
+    color: #878890;
+    line-height: 1.6;
+    font-size: 15;
+  }
+
+
+/*********************************************************************
+  footer [footer]
+*********************************************************************/
+footer{
+  padding-top:100px;
+  padding-bottom:100px;
+}
+footer .footer_wrap{
+  display: flex;
+  position: relative;
+}
+.footer_wrap .flex_item{
+/*나중삭제*/
+  /* width:25%; */
+  /* 플렉스 아이템 자신의 크기만큼 가져가기위서
+   width:25%; 단 컬럼 지정 %를 사용하지 말고
+   고유크기로 지정
+   flex-basis:auto;
+  */
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+.footer_wrap .footer_logo{
+  /* 플렉스 아이템 고유 크기 지정 */
+  width:63px; height: 13px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url(../img/footer_logo.png);
+}
+.footer_wrap .footer_menu{
+  display: flex;
+  padding:0 10px;
+}
+.footer_wrap .footer_menu li{
+  padding:0 10px;
+  position: relative;
+}
+.footer_wrap .footer_menu li:after{
+  content: '';
+  position: absolute;
+  right: 0; top:0;
+  width:1px; height: 100%;
+  background-color: #e5e5e5;
+}
+.footer_wrap .footer_menu li:last-child:after{
+  display: none;
+}
+.footer_wrap .footer_menu li a{}
+
+.footer_wrap .affiliate_box {
+  order:1;
+  margin-left:auto;/*❤❤❤*/
+  /* 플렉스컨테이너의 남은 공간을 알아서 여백으로 왼쪽에 주세요 */
+}
+.footer_wrap .affiliate_box  ul{
+  display: none;
+}
+
+.footer_wrap .footer_copy{
+   position: absolute;
+   left:50%; top:0;
+   transform:translateX(-50%);
+}
+
+
+/*********************************************************************
+  플러그인 [slider,swiper]
+*********************************************************************/
+
 /* 플러그인 */
 /* bxslider */
 .bx-wrapper {
@@ -494,23 +963,24 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color:#fff;
-  opacity:0.8;
+  color: #fff;
+  opacity: 0.8;
 }
 .swiper-button-next:hover,
 .swiper-button-next:focus,
 .swiper-button-prev:hover,
-.swiper-button-prev:focus{
+.swiper-button-prev:focus {
   opacity: 1;
   transition: color 0.2s;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background-color: var(--naver-color);
   border-radius: 0;
-  width:20px; height: 10px;
+  width: 20px;
+  height: 10px;
 }
 
-.swiper-pagination-bullet-active{
-  width:40px;
+.swiper-pagination-bullet-active {
+  width: 40px;
 }
