@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css');
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-barun-gothic.css");
 /* font-family: 'NanumBarunGothic'; */
 /*reset*/
 
@@ -49,9 +49,9 @@ textarea,
 select,
 button {
   /* font-family:'NanumBarunGothic', 'NanumSquare', 'NanumBarunGothic', 'Nanum Gothic', sans-serif; */
-  font-family: 'NanumBarunGothic', "NanumSquare", "NanumBarunGothic", "Nanum Gothic", "NanumSquare",
-    "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo",
-    sans-serif;
+  font-family: "NanumBarunGothic", "NanumSquare", "NanumBarunGothic",
+    "Nanum Gothic", "NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica",
+    "Arial", "AppleSDGothicNeo", sans-serif;
   font-size: 14px;
 }
 
@@ -124,8 +124,9 @@ em {
 }
 
 .chinese {
-  font-family: 'NanumBarunGothic', "NanumSquare", "NanumBarunGothic", "나눔바른고딕", "Dotum",
-    "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+  font-family: "NanumBarunGothic", "NanumSquare", "NanumBarunGothic",
+    "나눔바른고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo",
+    sans-serif;
 }
 
 .text_line {
@@ -170,34 +171,34 @@ textarea::-webkit-input-placeholder {
 
 input::-moz-placeholder {
   /* Firefox 19+ */
-  font-family: 'NanumBarunGothic' !important;
+  font-family: "NanumBarunGothic" !important;
   color: #333 !important;
 }
 
 input:-moz-placeholder {
   /* Firefox 18- */
-  font-family: 'NanumBarunGothic' !important;
+  font-family: "NanumBarunGothic" !important;
   color: #333 !important;
 }
 
 input:-ms-input-placeholder {
   /* IE 10+ */
-  font-family: 'NanumBarunGothic' !important;
+  font-family: "NanumBarunGothic" !important;
   color: #333 !important;
 }
 
 textarea::-moz-placeholder {
-  font-family: 'NanumBarunGothic' !important;
+  font-family: "NanumBarunGothic" !important;
   color: #333 !important;
 }
 
 textarea:-moz-placeholder {
-  font-family: 'NanumBarunGothic' !important;
+  font-family: "NanumBarunGothic" !important;
   color: #333 !important;
 }
 
 textarea:-ms-input-placeholder {
-  font-family: 'NanumBarunGothic' !important;
+  font-family: "NanumBarunGothic" !important;
   color: #333 !important;
 }
 
@@ -226,14 +227,15 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.main_content{}
-
-footer{
-  background-color: rgba(0,0,0, 0.7);
+.main_content {
 }
 
-header .header_wrap, 
-footer .footer_wrap{
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+header .header_wrap,
+footer .footer_wrap {
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -263,34 +265,47 @@ header .header_wrap {
 /*********************************************************************
   상세 상단 회원혜택 [신규회원가입혜택...무료배송]
 *********************************************************************/
-.main_content{}
-div.content_benefit{
+.main_content {
+}
+div.content_benefit {
   margin-top: 70px;
   align-items: center;
 }
-div.benefit_info_top{
+.title {
+  margin-bottom: 20px;
+}
+.title h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 60px;
+  height: 60px;
+  text-align: center;
+  color: #1a1a1a;
+  border-bottom: 1px solid #e0e0e0;
+}
+div.benefit_info_top {
   color: #212121;
   position: absolute;
   padding-top: 63px;
-  padding-left: 396px;
+  padding-left: 437px;
 }
-dl.benefit_title{
-font-size: 13px;
-font-weight: 200;
-transform: rotate( -6deg );
-line-height: 1.6;
+dl.benefit_title {
+  font-size: 13px;
+  font-weight: 200;
+  transform: rotate(-6deg);
+  line-height: 1.6;
 }
-dt.benefit_text{
+dt.benefit_text {
   font-size: 15px;
   font-weight: bold;
 }
-ul.benefit_list_container{
+ul.benefit_list_container {
   margin: 0 auto;
   padding-left: 16%;
   display: flex;
-  flex-direction: row; /* 플랙스 선언시 자동 선언됨*/ 
-  flex-wrap: nowrap; 
-  justify-content: start; 
+  flex-direction: row; /* 플랙스 선언시 자동 선언됨*/
+  flex-wrap: nowrap;
+  justify-content: start;
   align-content: stretch; /* //플랙스 선언시 자동 선언됨*/
   max-width: 1416px;
   background-position: 26px -9px;
@@ -298,57 +313,62 @@ ul.benefit_list_container{
   background-image: url(/cafe24/images/common/batch_bg_left_notice.png);
   background-size: 276px 191px;
 }
-li.benefit_list_box{
+li.benefit_list_box {
   width: 33.33%;
   box-sizing: border-box;
   position: relative;
   text-align: center;
 }
-li.benefit_list_box::after{ /*칸막이*/
-  content: '';
+li.benefit_list_box::after {
+  /*칸막이*/
+  content: "";
   position: absolute;
-  left: 0; top: 20px;
-  width: 1px; height: 80%;
-  background-color: #efefef; 
+  left: 0;
+  top: 20px;
+  width: 1px;
+  height: 80%;
+  background-color: #efefef;
 }
-li.benefit_list_box:first-child:after{
+li.benefit_list_box:first-child:after {
   display: none;
 }
 
-li.benefit_list_box a { /*아이콘 레이아웃*/
+li.benefit_list_box a {
+  /*아이콘 레이아웃*/
   display: block;
   /* position: relative; */
   width: 100%;
   padding: 100px 5px 0;
 }
-li.benefit_list_box:nth-child(1) a{  
+li.benefit_list_box:nth-child(1) a {
   background: no-repeat url(/cafe24/images/common/icon_box2.png) center top;
   background-size: 80px 83px;
 }
-li.benefit_list_box:nth-child(2) a{  
+li.benefit_list_box:nth-child(2) a {
   background: no-repeat url(/cafe24/images/common/icon_review.png) center top;
   background-size: 72px 75px;
 }
-li.benefit_list_box:nth-child(3) a{  
+li.benefit_list_box:nth-child(3) a {
   background: no-repeat url(/cafe24/images/common/icon_delivery5.png) center top;
   background-size: 87px 75px;
 }
-li.benefit_list_box:nth-child(4) a{  
-  background: no-repeat url(/cafe24/images/common/Instagram_Glyph_Black.png) center top;
+li.benefit_list_box:nth-child(4) a {
+  background: no-repeat url(/cafe24/images/common/Instagram_Glyph_Black.png)
+    center top;
   background-size: 69px 69px;
 }
-dl.decrition{
+dl.decrition {
   position: relative;
   width: 100%;
   padding: 0px 30px 30px;
 }
-dt.title_text{
+dt.title_text {
   font-size: 17px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #212121;
 }
-dd.desc_text{
+dd.desc_text {
   font-size: 13px;
   line-height: 1.6;
   color: #3a3b3e;
