@@ -1,126 +1,174 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-  .MuiIconButton-label {
-      width: 100%;
-      display: flex;
-      align-items: inherit;
-      justify-content: inherit;
-  }
-  *, *::before, *::after {
-      box-sizing: inherit;
-  }
-  @media (min-width: 1200px)
-  * {
-      image-rendering: -webkit-optimize-contrast;
-  }
-  .jss545 {
-    bottom: 78px;
-    opacity: 1;
-}
-@media (min-width: 1200px)
-.jss544 {
-    right: 30px;
-    bottom: 10px;
-}
-.jss544 {
-    right: 16px;
-    width: 52px;
-    bottom: -60px;
-    height: 52px;
-    display: flex;
-    opacity: 0;
-    z-index: 1100;
-    overflow: hidden;
-    position: fixed;
-    box-shadow: 0px 6px 8px rgb(0 0 0 / 8%);
-    transition: ease all 0.3s;
-    align-items: center;
-    border-radius: 50%;
-    margin-bottom: env(safe-area-inset-bottom);
-    justify-content: center;
-    background-color: #fff;
-}
-.MuiIconButton-root {
-    flex: 0 0 auto;
-    color: inherit;
-    padding: 12px;
-    overflow: visible;
-    font-size: 2.4rem;
-    text-align: center;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    border-radius: 50%;
-}
-.MuiButtonBase-root {
-    color: inherit;
-    /* border: 0; */
-    cursor: pointer;
-    margin: 0;
-    display: inline-flex;
-    outline: 0;
-    padding: 0;
-    position: relative;
-    align-items: center;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Malgun Gothic","맑은 고딕",돋움,Dotum,sans-serif;
-    user-select: none;
-    border-radius: 0;
-    vertical-align: middle;
-    -moz-appearance: none;
-    justify-content: center;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-appearance: none;
-    -webkit-tap-highlight-color: transparent;
-}
-</style>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #WideBanner_Parallax {
+        position: relative;
+        height: 600px;
+        max-width: 100%;
+        margin: 40px auto 0px;
+        text-align: left;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      #WideBanner_Parallax .middle_copy {
+        position: absolute;
+        background-color: rgba(250, 250, 250, 0);
+        display: inline-block;
+        height: 420px;
+        padding: 0 5%;
+        box-sizing: border-box;
+        top: 50%;
+        left: 10%;
+        transform: translate(0, -50%);
+        z-index: 9;
+      }
+      #WideBanner_Parallax .middle_copy .text1 {
+        padding: 50px 0px 20px 0px;
+        width: 100%;
+        font-weight: 300;
+        font-size: 35px;
+        line-height: 60px;
+        color: #222;
+      }
+      #WideBanner_Parallax .middle_copy .text2 {
+        margin: 10px auto 0;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+        color: #222;
+      }
+      #WideBanner_Parallax .middle_copy .text3 {
+        margin: 10px auto 0;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: #222;
+      }
+      #WideBanner_Parallax .middle_copy .text4 a {
+        display: inline-block;
+        margin: 50px auto 0;
+        padding: 0px 20px;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 50px;
+        color: #222;
+        border: 1px solid rgba(50, 50, 50, 1);
+      }
+      #WideBanner_Parallax .middle_copy .xi-x {
+        padding-left: 50px;
+      }
+      .xi-x {
+        font-size: 1.33333em;
+        line-height: 0.75em;
+        vertical-align: -15%;
+      }
+      [class*=" xi-"],
+      [class^="xi-"] {
+        font-family: xeicon !important;
+        display: inline-block;
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .xi-long-arrow-right:before {
+        content: "\e90b";
+      }
 
-
-<body>
-  <button class="MuiButtonBase-root MuiIconButton-root jss544 jss545" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root jss546" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="img"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 4.13769L12.75 19.4087C12.75 19.7611 12.9645 20.078 13.2917 20.2089C13.6118 20.3369 13.9774 20.2619 14.2212 20.0181L14.4696 19.7696C14.7625 19.4767 15.2374 19.4767 15.5303 19.7696C15.8232 20.0625 15.8232 20.5374 15.5303 20.8303L15.2818 21.0787L14.7515 20.5484L15.2818 21.0787C14.6138 21.7468 13.6118 21.9525 12.7346 21.6016C11.8379 21.2429 11.25 20.3744 11.25 19.4087L11.25 4.13799L4.27167 9.78308C3.94963 10.0436 3.47739 9.99372 3.21688 9.67168C2.95636 9.34965 3.00624 8.8774 3.32828 8.61689L11.214 2.23773C11.6725 1.86683 12.3278 1.86684 12.7863 2.23774L20.6719 8.61689C20.9939 8.87741 21.0438 9.34965 20.7833 9.67169C20.5227 9.99372 20.0505 10.0436 19.7285 9.78308L12.75 4.13769Z" fill="rgba(100, 100, 100, 1)"></path></svg></span><span class="MuiTouchRipple-root"></span></button>
- 
-        
+      #WideBanner_Parallax .bg-wrap {
+        clip: rect(0, auto, auto, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #WideBanner_Parallax .bg-wrap .bg {
+        position: fixed;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: #555;
+      }
+      img,
+      fieldset {
+        border: none;
+        vertical-align: top;
+      }
+      p {
+        height: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi,
+      numquam ut expedita cum veritatis magnam laudantium error doloremque culpa
+      delectus officia. Ab, natus commodi perferendis quibusdam temporibus a
+      exercitationem?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi,
+      numquam ut expedita cum veritatis magnam laudantium error doloremque culpa
+      delectus officia. Ab, natus commodi perferendis quibusdam temporibus a
+      exercitationem?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi,
+      numquam ut expedita cum veritatis magnam laudantium error doloremque culpa
+      delectus officia. Ab, natus commodi perferendis quibusdam temporibus a
+      exercitationem?
+    </p>
+    <div id="WideBanner_Parallax" class="first">
       <div class="middle_copy wow fadeIn" data-wow-delay="0.2s">
-          <p class="text1">브랜드스토리</p>
-          <p class="text2">We are a brand specializing in pets.</p>
-          <p class="text3">우리 소중한 반려동물의 건강하고 더 나은 삶에 도움을 주고자 늘 고민합니다.</p>
-          <p class="text4">
-              <a href="#none">view more <i class="xi-long-arrow-right xi-x"></i></a>    <!-- ◀◀◀ #none 지우고 링크 경로 삽입 -->
-          </p>
-  </div>  
-  
-  <div class="bg-wrap">
-      <div class="bg"><div app4you-smart-banner="smart-banner-admin-PC00004" app4you-smart-banner-html="true" class="xans-element- xans-smart-banner-admin xans-smart-banner-admin-PC00004">
-<a href="javascript:void(0)%5C;" style="cursor:default"><img src="https://file.cafe24cos.com/banner-admin-live/upload/ecudemo245421/c2f8c90d-99a6-442e-a1fb-7c878096c9d4.jpeg" style="width:100%"></a>
+        <p class="text1">브랜드스토리</p>
+        <p class="text2">We are a brand specializing in pets.</p>
+        <p class="text3">
+          우리 소중한 반려동물의 건강하고 더 나은 삶에 도움을 주고자 늘
+          고민합니다.
+        </p>
+        <p class="text4">
+          <a href="#none">view more <i class="xi-long-arrow-right xi-x"></i></a>
+          <!-- ◀◀◀ #none 지우고 링크 경로 삽입 -->
+        </p>
+      </div>
 
-<div class="right_layout">
-  <div class="right_con">
-      <!-- 홈, 위로, 아래로 버튼 -->
-      <div class="wrap_fixed_updown">
-          <div class="fixed_updown_btn">
-              <!-- 아이콘메뉴 -->
-              <!-- 인스타그램 링크  href="" 안에 #none 를 지우고 주소를 넣으세요. -->
-<div><a href="#none" target="_blank"><img src="/cafe24/ex-images/right_icon_insta.png" alt=""></a></div>
-
-<!-- 카카오채널  아래 [본인계정]자리에 만드신 계정을 넣으시면 됩니다. -->
-<div><a href="#none" onclick="window.open('https://pf.kakao.com/본인계정/chat','','width=486, height=745,scrollbars=yes');return false;"><img src="/cafe24/ex-images/right_icon_kakao.png" alt=""></a></div>
-
-<!-- 네이버톡톡 링크  아래 [본인계정]자리에 만드신 계정을 넣으시면 됩니다. -->
-<div><a href="#none" onclick="window.open('https://talk.naver.com/ct/본인계정','width=486, height=745,scrollbars=yes');return false;"><img src="/cafe24/ex-images/right_icon_ntalk.png" alt=""></a></div> 
-              <button type="button" class="btn_updown btn_up">맨위로</button>
-              <button type="button" class="btn_updown btn_down">맨아래로</button>
+      <div class="bg-wrap">
+        <div class="bg">
+          <div
+            app4you-smart-banner="smart-banner-admin-PC00004"
+            app4you-smart-banner-html="true"
+            class="xans-element- xans-smart-banner-admin xans-smart-banner-admin-PC00004"
+          >
+            <a href="javascript:void(0)%5C;" style="cursor: default"
+              ><img
+                src="https://file.cafe24cos.com/banner-admin-live/upload/ecudemo245421/c2f8c90d-99a6-442e-a1fb-7c878096c9d4.jpeg"
+                style="width: 100%"
+            /></a>
           </div>
-      </div> 
-      <!--// 홈, 위로, 아래로 버튼 --> 
-  </div>   
-</div>
-</div></div>
-  </div>
-</div>
-</body>
+        </div>
+      </div>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat commodi,
+      numquam ut expedita cum veritatis magnam laudantium error doloremque culpa
+      delectus officia. Ab, natus commodi perferendis quibusdam temporibus a
+      exercitationem?
+    </p>
+  </body>
 </html>

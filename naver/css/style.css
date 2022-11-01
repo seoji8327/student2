@@ -226,19 +226,18 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.main_content{}
-
-footer{
-  background-color: rgba(0,0,0, 0.3);
+.main_content {
 }
 
-header .header_wrap, 
-footer .footer_wrap{
-  max-width: 1600px;
+footer {
+  background-color: #f8f8f8;
+}
+
+header .header_wrap,
+footer .footer_wrap {
+  max-width: 1300px;
   margin: 0 auto;
 }
-
-
 
 /**
 header
@@ -469,22 +468,24 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   padding: 0 50px;
   position: relative; /*기준-1*/
 }
-.content_summary li.summary_container:first-child{
-padding-left: 0px;
-} 
+.content_summary li.summary_container:first-child {
+  padding-left: 0px;
+}
 .content_summary li.summary_container::after {
-content: "";
-position: absolute; /*선택-1*/
-right: 0; top: 0;
-width: 1px; height: 100%;
-background-color: #959595;
+  content: "";
+  position: absolute; /*선택-1*/
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #959595;
 }
 .content_summary li.summary_container:last-child:after {
   display: none;
 }
 
 .content_summary h3 {
-  font-family: "NanumSquare", "Nanum Gothic", sans-serif ;
+  font-family: "NanumSquare", "Nanum Gothic", sans-serif;
   font-size: 14px;
   font-weight: 800;
   margin-bottom: 30px;
@@ -499,17 +500,17 @@ background-color: #959595;
 }
 .content_summary .text_wrap .title_text strong {
   display: block;
-  white-space: nowrap; /*말줌일표 지정 시작*/
+  white-space: nowrap; /*1줄로 말줌일표 지정 시작*/
   overflow: hidden;
-  text-overflow: ellipsis; /*말줄임표 지정 끝*/
+  text-overflow: ellipsis; /*1줄로 말줄임표 지정 끝*/
   font-weight: 700;
 }
 .content_summary .text_wrap .desc_text {
   /* margin-bottom: 30px; */
-  display: -webkit-box; /*2줄이상의 상태 말줄임 시작*/
+  display: -webkit-box; /*2줄로 말줄임 시작*/
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /*2줄이상의 상태 말줄임 끝*/
+  -webkit-line-clamp: 2; /*2줄로 말줄임 끝*/
   margin-top: 10px;
 }
 
@@ -555,7 +556,7 @@ background-color: #959595;
 }
 
 /*career '수 많은...느낍니다.' 글자 지정 */
-.content_summary .career .text_wrap  {
+.content_summary .career .text_wrap {
   font-size: 18px;
   display: -webkit-box; /*3줄이상의 상태 말줄임 시작*/
   overflow: hidden;
@@ -612,7 +613,6 @@ background-color: #959595;
 }
 /* .main_content .content_service{} */
 
-
 /*********************************************************************
   6개 이미지바둑판 [N로봇,clova노트..등]
 *********************************************************************/
@@ -649,8 +649,10 @@ li.service_thumbnail_box a:after {
   content: "";
   display: block;
   position: absolute; /*<-선택항목, 기준요소=li.service_thumbnail_box a이다*/
-  left: 0; top: 0;
-  width: 100%; height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(8, 21, 88, 0.5);
   opacity: 0;
   transition: opacity 02s;
@@ -703,8 +705,10 @@ li.service_thumbnail_box .description::after {
   content: "";
   display: block;
   position: absolute; /*선택항목, 기준은 li.service_thumbnail_box .description 이다*/
-  left: 30px;  top: 0px; /*웹 브라우저 내 보이는 아이콘의 위치 지정*/
-  width: 23px;  height: 23px; /*아이콘 크기*/
+  left: 30px;
+  top: 0px; /*웹 브라우저 내 보이는 아이콘의 위치 지정*/
+  width: 23px;
+  height: 23px; /*아이콘 크기*/
   background: no-repeat url(../img/sprite.png);
   background-position: -199px -129px; /*sprite 내 해당 아이콘의 위치*/
 }
@@ -721,121 +725,140 @@ li.service_thumbnail_box .description .desc_text {
   white-space: nowrap; /*//한줄 말줄임*/
 }
 
-
 /*********************************************************************
   글과 4단 바로가기 [기술로 다양성을 꽃피우는 플랫폼...]
 *********************************************************************/
 
 /* .main_content .content_support{} */
-.main_content .content_support{  
-  margin-top: 150px;  /* .content_support 위 바깥여백 150px */
+.main_content .content_support {
+  margin-top: 150px; /* .content_support 위 바깥여백 150px */
   text-align: center; /*인라인요소, 텍스트 가운데 정렬하기*/
 }
-.content_support .support_title{
+.content_support .support_title {
   position: relative; /*★★★*/
-  font-size: 32px; color: #333; /*폰트 32px, 색상 #333*/
+  font-size: 32px;
+  color: #333; /*폰트 32px, 색상 #333*/
   padding-bottom: 20px;
   margin-bottom: 20px; /*아래여백 20px*/
 }
-.content_support .support_text{
-  font-size: 18px;  color: #333; line-height: 1.6;
+.content_support .support_text {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
 }
-  
-.content_support .support_title::after{ /*초록 줄*/
+
+.content_support .support_title::after {
+  /*초록 줄*/
   content: ""; /*★★★*/
   position: absolute; /*★★★*/
-  left: 50%; bottom: 0%; /*★★★*/
-  width: 5rem; height: 2px;
+  left: 50%;
+  bottom: 0%; /*★★★*/
+  width: 5rem;
+  height: 2px;
   background-color: var(--naver-color);
-  transform: translatex(-50%); /*★★★ x좌표로 본인 크기의 반이 왼쪽으로 이동 하기★★★*/
+  transform: translatex(
+    -50%
+  ); /*★★★ x좌표로 본인 크기의 반이 왼쪽으로 이동 하기★★★*/
 }
-  .content_support ul.support_list_container{
-    margin-top: 120px;
-    display: flex;
-    flex-direction: row; /* 플랙스 선언시 자동 선언됨*/ 
-    flex-wrap: nowrap; 
-    justify-content: start; 
-    align-content: stretch; /* //플랙스 선언시 자동 선언됨*/
-  }
-  .content_support li.support_list_box{
-    width: 25%;  /* = flex: 0 0 25; = flex-basis: 25%;*/
-    flex-basis: 50%;
-    box-sizing: border-box;
-    position: relative; /*기준-1*/
-  }
-  .content_support li.support_list_box::after{ /*칸막이*/
-    content: "";
-    position: absolute; /*선택-1*/
-    right: 0; top: 0;
-    width: 1px; height: 100%;
-    background-color: #959595;
-  }
-  .content_support li.support_list_box:nth-child(4):after{ /*마지막 칸막이 감춤*/
-display: none;
-  }
+.content_support ul.support_list_container {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: row; /* 플랙스 선언시 자동 선언됨*/
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-content: stretch; /* //플랙스 선언시 자동 선언됨*/
+}
+.content_support li.support_list_box {
+  width: 25%; /* = flex: 0 0 25; = flex-basis: 25%;*/
+  flex-basis: 50%;
+  box-sizing: border-box;
+  position: relative; /*기준-1*/
+}
+.content_support li.support_list_box::after {
+  /*칸막이*/
+  content: "";
+  position: absolute; /*선택-1*/
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #959595;
+}
+.content_support li.support_list_box:nth-child(4):after {
+  /*마지막 칸막이 감춤*/
+  display: none;
+}
 
-  .content_support li.support_list_box a{
-    /*bgi용 적용태그*/
-    display: block;
-    padding: 135px 10px 0; 
-    position: relative;
-  }
+.content_support li.support_list_box a {
+  /*bgi용 적용태그*/
+  display: block;
+  padding: 135px 10px 0;
+  position: relative;
+}
 
-  .content_support li.support_list_box a::after{
-    content: "";
-    position: absolute;
-    left: 50%; top: 0%; 
-    /* x좌표로 본인 크기의 반이 왼쪽으로 이동 */
-    transform: translatex(-50%); /*★★★ x좌표로 본인 크기의 반이 왼쪽으로 이동 하기★★★*/
-    background: transparent  no-repeat url(../img/sprite.png);
-    height: 100px;
-    /* 높이를 지정하지 않으면 자식 요소의 높이만큼 온다 */
-  }
-  .content_support  li.support_list_box:nth-child(1) a::after{
-    width: 87px; 
-    background-position:0 -957px;}
-  .content_support  li.support_list_box:nth-child(2) a::after{
-    width: 101px; 
-    background-position:-92px -957px;}
-  .content_support  li.support_list_box:nth-child(3) a::after{
-    width: 110px; 
-    background-position:-199px -957px;}
-  .content_support  li.support_list_box:nth-child(4) a::after{
-    width: 93px; 
-    background-position:-316px -957px;}
+.content_support li.support_list_box a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  /* x좌표로 본인 크기의 반이 왼쪽으로 이동 */
+  transform: translatex(
+    -50%
+  ); /*★★★ x좌표로 본인 크기의 반이 왼쪽으로 이동 하기★★★*/
+  background: transparent no-repeat url(../img/sprite.png);
+  height: 100px;
+  /* 높이를 지정하지 않으면 자식 요소의 높이만큼 온다 */
+}
+.content_support li.support_list_box:nth-child(1) a::after {
+  width: 87px;
+  background-position: 0 -957px;
+}
+.content_support li.support_list_box:nth-child(2) a::after {
+  width: 101px;
+  background-position: -92px -957px;
+}
+.content_support li.support_list_box:nth-child(3) a::after {
+  width: 110px;
+  background-position: -199px -957px;
+}
+.content_support li.support_list_box:nth-child(4) a::after {
+  width: 93px;
+  background-position: -316px -957px;
+}
 
-  .content_support li.support_list_box a .title_text{
-    color: var(--naver-color);
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
+.content_support li.support_list_box a .title_text {
+  color: var(--naver-color);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-  /*a태그에 hover하면 dt.title_text에 밑줄 적용하기*/
-  .content_support a:hover dt.title_text{
-    text-decoration: underline;
-  }
+/*a태그에 hover하면 dt.title_text에 밑줄 적용하기*/
+.content_support a:hover dt.title_text {
+  text-decoration: underline;
+}
 
-  .content_support li.support_list_box .desc_text{
-    color: #878890;
-    line-height: 1.6;
-    font-size: 15;
-  }
-
+.content_support li.support_list_box .desc_text {
+  color: #878890;
+  line-height: 1.6;
+  font-size: 15;
+}
 
 /*********************************************************************
   footer [footer]
 *********************************************************************/
-footer{
-  padding-top:100px;
-  padding-bottom:100px;
+footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-footer .footer_wrap{
+footer .footer_wrap {
   display: flex;
   position: relative;
+  justify-content: flex-start;
+  align-items: center;
 }
-.footer_wrap .flex_item{
-/*나중삭제*/
+.footer_wrap .flex_item {
+  /*나중삭제*/
   /* width:25%; */
   /* 플렉스 아이템 자신의 크기만큼 가져가기위서
    width:25%; 단 컬럼 지정 %를 사용하지 말고
@@ -843,51 +866,73 @@ footer .footer_wrap{
    flex-basis:auto;
   */
   box-sizing: border-box;
-  background-color: #fff;
-  border: 1px solid #000;
+  /* background-color: #fff; */
+  /* border: 1px solid #000; */
 }
-.footer_wrap .footer_logo{
+.footer_wrap .footer_logo {
   /* 플렉스 아이템 고유 크기 지정 */
-  width:63px; height: 13px;
+  width: 63px;
+  height: 13px;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-image: url(../img/footer_logo.png);
 }
-.footer_wrap .footer_menu{
+.footer_wrap .footer_menu {
   display: flex;
-  padding:0 10px;
+  padding: 0 10px;
 }
-.footer_wrap .footer_menu li{
-  padding:0 10px;
+.footer_wrap .footer_menu li {
+  padding: 0 10px;
   position: relative;
 }
-.footer_wrap .footer_menu li:after{
-  content: '';
+.footer_wrap .footer_menu li:after {
+  content: "";
   position: absolute;
-  right: 0; top:0;
-  width:1px; height: 100%;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
   background-color: #e5e5e5;
 }
-.footer_wrap .footer_menu li:last-child:after{
+.footer_wrap .footer_menu li:last-child:after {
   display: none;
 }
-.footer_wrap .footer_menu li a{}
+.footer_wrap .footer_menu li a {
+}
 
 .footer_wrap .affiliate_box {
-  order:1;
-  margin-left:auto;/*❤❤❤*/
+  position: relative; /*기준1*/
+  order: 1;
+  margin-left: auto; /*❤❤❤*/
   /* 플렉스컨테이너의 남은 공간을 알아서 여백으로 왼쪽에 주세요 */
 }
-.footer_wrap .affiliate_box  ul{
-  display: none;
+.footer_wrap .affiliate_box .affiliate_list {
+  display: none; /*스크립트 이용해서 표시*/
+  position: absolute; /*요소겹침, 기준1(ralative)정해줘야함.*/
+  width: 200px;
+  left: -20px;
+  bottom: -10px;
+  padding: 1.5rem 1rem;
+  /* 나중에 삭제*/
+  background-color: #fff;
+  border: 1px solid #999;
+}
+.footer_wrap .affiliate_box .affiliate_list .affiliate_item {
+}
+.footer_wrap .affiliate_box .affiliate_list .affiliate_item a {
+  color: #999;
+  font-size: 0.7rem;
+}
+.footer_wrap .affiliate_box .affiliate_list .affiliate_item a:hover {
+  color: var(--naver-color);
 }
 
-.footer_wrap .footer_copy{
-   position: absolute;
-   left:50%; top:0;
-   transform:translateX(-50%);
+.footer_wrap .footer_copy {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
-
 
 /*********************************************************************
   플러그인 [slider,swiper]
@@ -984,3 +1029,34 @@ footer .footer_wrap{
 .swiper-pagination-bullet-active {
   width: 40px;
 }
+
+/*********************************************************************
+  반응형웹 설정 [size : 992기준 ]
+*********************************************************************/
+/*desktop에만 보이는 = desktop-only*/
+.desktop-only {
+  display: block;
+}
+@media (max-width: 1199.98px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* ⇣⇩↓ 768px 이하의 스크린에서 보일 css를 지정 */
+@media (max-width: 767.98px) {
+  header .header_wrap,
+  footer .footer_wrap {
+    max-width: none;
+    margin: 0 50px;
+  }
+} /*@media(max-width:767.98px)*/
+
+/* ⇣⇩↓ 1200이하의 스크린에서 보일 css를 지정 */
+@media (max-width: 1199.98px) {
+  header .header_wrap,
+  footer .footer_wrap {
+    max-width: none;
+    margin: 0 50px;
+  }
+} /*@media(max-width:1199.98px)*/
