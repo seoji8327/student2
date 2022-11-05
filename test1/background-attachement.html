@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인_4번째 섹션 BGI배너</title>
+ 
+  </head>
+  <body>
+      <!-- 테스트후 삭제 -->
+    <div class="test">
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis iusto obcaecati unde. Dicta eveniet similique, architecto error assumenda at maiores, sed magnam illo alias quisquam suscipit. Adipisci, deleniti repellendus.</h1>
+     </div> 
+     <!--// 테스트후 삭제 -->
+    <section>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700;800&display=swap" rel="stylesheet">
+      <!-- 메인_4번째 섹션 BGI배너 추가-->
+     <!-- 2022.11.01 수정-->
+     <div class="title">
+      <p class="title-01">HAPPY PET STORY</p>
+      <p class="title-02">멍멍이와 하나되는 해피펫 스토리</p>
+    </div>
+     <div class="banner">
+      <a href="https://iruyya.cafe24.com/skin-skin6/category/%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4/66/" style="cursor: pointer;">
+       <div class="left img-wrap">
+         <img src="/css/background/images/sample_212_Original.jpg" alt="강아지장난감 30%할인전">
+       </div>
+       <div class="right">
+         <p class="desc">Runway items season off</p>
+         <p class="title">30%</p>
+         <span class="button">
+             <dl class="description">
+               <dt class="title_text">Shop now</dt>
+             </dl>
+         </span>
+       </div>
+     </div>
+   </section>
+   <!-- 테스트후 삭제 -->
+    <div class="test"> 
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facilis iusto obcaecati unde. Dicta eveniet similique, architecto error assumenda at maiores, sed magnam illo alias quisquam suscipit. Adipisci, deleniti repellendus.</h1>
+   </div>
+     <!--// 테스트후 삭제 -->
+  </body>
+</html>
+
+<style>
+     /* 테스트후 삭제  */
+     .test {
+    height: 100vh;
+    padding: 50px;
+    box-sizing: border-box;
+    background-color: rgb(251, 173, 29);
+  }
+    /* // 테스트 후 삭제 */
+
+  @font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.title-01{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    color: #1a1a1a;
+    text-align: center;
+  }
+  .title-02{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    color: #a3a3a3;
+    margin-top: 10px;
+    text-align: center;
+  }
+  /*공통*/
+  /*가변이미지*/
+  .img-wrap img {
+    width: 100%;
+    display: block;
+    opacity: 0;
+  }
+  .banner {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 120px !important;
+  }
+  .banner:hover .right .button {
+   text-decoration: underline;
+  }
+  .banner .left {
+    float: left;
+    width: 65%;
+    height: 500px;
+    border-radius: 0 250px 250px 0;
+    overflow: hidden;
+  } 
+  .banner .left.img-wrap {
+    background-image: url(/css/background/images/sample_212_Original.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: -270px top;
+    background-size: cover;
+  }
+  .banner .right {
+    float: right;
+    width: 35%;
+    height: 500px;
+    padding-top: 152px;
+    padding-left: 100px;
+    box-sizing: border-box;
+  }
+  .banner .right .desc,
+  .banner .right .button {
+    font-family: "Raleway", sans-serif !important;
+    color: #1a1a1a;
+  }
+  .banner .right .title{
+    font-family: 'PyeongChangPeace-Bold';
+    color: #1a1a1a;
+  }
+  .banner .right .desc {
+    font-weight: 200;
+    font-size: 30px;
+    letter-spacing: -1px;
+    line-height: 0.1rem;
+  }
+  .banner .right .title {
+    margin: -10px 0 40px 0;
+    font-weight: 800;
+    font-size: 6rem;
+    letter-spacing: 2px;
+  }
+  .description{
+    margin: auto;
+  }
+  .banner .right .button {
+    display: inline-block;
+    border: 1px solid #1a1a1a;
+    padding: 13px 12px;
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+  .banner .right .button a .title_text {
+    color: #333;
+  }
+</style>

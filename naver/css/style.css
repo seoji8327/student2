@@ -226,8 +226,7 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.main_content {
-}
+.main_content {}
 
 footer {
   background-color: #f8f8f8;
@@ -450,8 +449,7 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 
 /* .main_content */
 .main_content {
-  margin-top: 150px;
-  padding: 0 150px 120px;
+  padding: 120px 150px;
 }
 .main_content ul.content_summary {
   display: flex;
@@ -465,23 +463,20 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
   width: 25%; /*컨테이너의 가로크기에 문제가 생길때 해당 태그를 쓰면 해결된다*/
   /* flex-grow: 0;
   flex-shrink: 1; */
-  padding: 0 50px;
+  padding: 0 50px; /*❤❤❤❤❤*/
   position: relative; /*기준-1*/
 }
 .content_summary li.summary_container:first-child {
-  padding-left: 0px;
+  padding-left: 0px; /*❤❤❤❤❤*/
 }
 .content_summary li.summary_container::after {
-  content: "";
-  position: absolute; /*선택-1*/
-  right: 0;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background-color: #959595;
+  content: ""; /*❤❤❤❤❤*/
+  position: absolute;  right: 0; top: 0; /*선택-1*/ /*❤❤❤❤❤*/
+  width: 1px;   height: 100%; /*❤❤❤❤❤*/
+  background-color: #e5e5e5;
 }
 .content_summary li.summary_container:last-child:after {
-  display: none;
+  display: none; /*❤❤❤❤❤*/
 }
 
 .content_summary h3 {
@@ -492,7 +487,6 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 }
 .content_summary .text_wrap {
   height: 76px;
-  margin: 31px 0 30px;
 }
 .content_summary .text_wrap .title_text {
   width: 100%;
@@ -518,7 +512,6 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 .content_summary a.summary_link {
   position: relative; /*.content_summary a.summary_link .icon_arrow 의 기준요소 지점이다.*/
   padding-right: 40px;
-  font-weight: 700;
   color: #000;
 }
 /*'바로가기' 글자 후버 시 아랫줄 표시*/
@@ -528,22 +521,18 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 /* '바로가기 글자 옆에 화살표' 초록동그라미로 변경되기 */
 .content_summary a.summary_link span.icon_arrow {
   position: absolute; /*일반흐름에서 제외하기 -> position: absolute 적용 시 기준요소 지점을 정해줘야 한다!*/
-  right: 0;
-  top: 0;
+  right: 0; top: 0;
   display: block; /*width를 지정하기*/
-  width: 18px;
-  height: 18px;
+  width: 18px; height: 18px;
   border-radius: 50%; /*사각형 -> 동그라미 변경해주는 태그*/
 }
 /*'바로가기 글자 옆 화살표' 이미지 가져오기 및 위치 조정 */
 .content_summary a.summary_link span.icon_arrow:after {
   content: "";
   position: absolute; /*-> 기준요소는? -> */
-  left: 50%;
-  top: 50%; /*부모 요소의 가운데서 시작*/
+  left: 50%; top: 50%; /*부모 요소의 가운데서 시작*/
   transform: translate(-50%, -50%); /*자기의 크기 반만큼 이동*/
-  width: 5px;
-  height: 8px; /*after, before 의 크기지정*/
+  width: 5px; height: 8px; /*after, before 의 크기지정*/
   background: url(../img/sprite.png) no-repeat;
   background-position: -102px -50px;
 }
@@ -591,8 +580,7 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 /*'3,000' 위치 조정하기*/
 .content_summary .stock1 .text_wrap .figure {
   position: absolute; /*-> 기준요소는? = .content_summary .stock1 .text_wrap 이다 */
-  top: 26px;
-  right: 0%;
+  top: 26px;  right: 0%;
 }
 /*'krx2022.10.12' 위치조정 하기*/
 .content_summary .stock1 .text_wrap .date {
@@ -609,10 +597,8 @@ nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap {
 }
 /*'결산공고 보러가기' 폰트 사이즈 조정*/
 .content_summary .stock2 .text_wrap {
-  font-size: 14px;
+  font-size: 18px;
 }
-/* .main_content .content_service{} */
-
 /*********************************************************************
   6개 이미지바둑판 [N로봇,clova노트..등]
 *********************************************************************/
@@ -672,7 +658,7 @@ li.service_thumbnail_box .thumbnail {
 
 li.service_thumbnail_box:hover .thumbnail {
   /*-> li.service_thumbnail_box요소에서 마우스 hover 상태일때 thumbnail*/
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 li.service_thumbnail_box .thumbnail img {
@@ -782,7 +768,7 @@ li.service_thumbnail_box .description .desc_text {
   top: 0;
   width: 1px;
   height: 100%;
-  background-color: #959595;
+  background-color: #e5e5e5;
 }
 .content_support li.support_list_box:nth-child(4):after {
   /*마지막 칸막이 감춤*/
@@ -1042,75 +1028,139 @@ footer .footer_wrap {
     display: block;
   }
 }
-.main_content{
-  padding: 0;
-}
-/* ⇣⇩↓ 1200이하의 스크린에서 보일 css를 지정 */
+
+/* ---------------------------------------------
+⇣⇩↓ 1200이하의 스크린에서 보일 css를 지정 
+-----------------------------------------------*/
 @media (max-width: 1200px) {
   header .header_wrap,
   footer .footer_wrap {
     max-width: none;
     margin: 0 50px;
   }
-} /*@media(max-width:1199.98px)*/
-
-.service_list_container li.service_thumbnail_box {
-  width: 50%;
-  flex-basis: 50%;
-}
-.content_support ul.support_list_container {
-  flex-wrap: wrap;
-}
-
-.content_support li.support_list_box {}
-
-
-/* ⇣⇩↓ 768px 이하의 스크린에서 보일 css를 지정 */
-@media (max-width: 768px) {
-  header .header_wrap,
-  footer .footer_wrap {
-    max-width: none;
-    margin: 0 50px;
+.main_content{
+  padding: 50px;
   }
-}
-.content_support li.support_list_box:nth-child(2):after {
-  /*마지막 칸막이 감춤*/
-  display: none;
-}
-
-/*@media(max-width:767.98px)*/
-
 .main_content ul.content_summary {
   flex-wrap: wrap;
 }
 .content_summary .summary_container {
   flex-basis: 50%;
-  width: 5px;
-  margin-bottom: 50px;
-  padding: 0;
+  width: 50%;
 }
 .content_summary .summary_container {
-
+  margin-bottom: 50px;
 }
-/* 두번째 li 오른쪽 선 없애기 */
-/* .content_summary li.summary_container:second-child  */
-.content_summary .summary_container:after{
+.content_summary .summary_container {
+  padding: 0;
+  margin-bottom: 2rem; /* News, career 칸 아래 여백 입력*/
+}
+  /* 두번째 li 오른쪽 칸막이 제거 */
+.content_summary .career:after{
   display: none;
 }
-.service_list_container li.service_thumbnail_box {
-width: 100%;
-flex-basis: 100%;
+/* 세번째 왼쪽 여백 제거 */
+.content_summary .stock1{
+  padding-left: 0;
 }
+
+.service_list_container li.service_thumbnail_box{
+  width: 50%;
+  flex-basis: 50%;
+}
+
 .content_support ul.support_list_container {
   flex-wrap: wrap;
 }
 .content_support li.support_list_box {
-
+  width: 50%;
+  flex-basis: 50%;
 }
-.content_support li.support_list_box::after {
-
-}
-.content_support li.support_list_box:nth-child(2):after {
-  /*마지막 칸막이 감춤*/
+.content_support li.support_list_box:nth-child(2):after {   /*마지막 칸막이 감춤*/
   display: none;
 }
+
+} /* // @media(max-width:1199.98px) */
+
+/* ---------------------------------------------
+  ⇣⇩↓ 768px 이하의 스크린에서 보일 css를 지정 
+  ---------------------------------------------*/
+/* 
+768px 이하의스크린에서 보일 css 
+*/
+@media (max-width:768px){
+  header .header_wrap,
+  footer .footer_wrap{
+    max-width: none;
+    margin: 0 50px;
+  }
+
+  .content_summary .summary_container{
+    flex-basis: 100%;
+    width:100%;
+  }
+  .content_summary .summary_container{
+    margin-bottom:50px;
+    padding:0;
+  }
+  /* 두번째 li 오른쪽 선 없애기 */
+  .content_summary .summary_container:after{
+    display: none;
+  }
+  
+  .service_list_container li.service_thumbnail_box{
+    width:100%;
+    flex-basis: 100%;
+   }
+
+   .content_support  li.support_list_box{
+    width:100%;
+   flex-basis: 100%;
+  }
+
+  .content_support  li.support_list_box::after{
+    display: none;
+   }
+
+}/*@media (max-width:767.98px)*/
+
+/* ---------------------------------------------
+  ⇣⇩↓ 360px 이하의 스크린에서 보일 css를 지정 
+  ---------------------------------------------*/
+  @media (max-width: 360px) {
+    header .header_wrap,
+    footer .footer_wrap {
+      max-width: none;
+      margin: 0 50px;
+    }
+    .main_content ul.content_summary {
+      flex-wrap: wrap;
+    }
+    .content_summary .summary_container {
+      flex-basis: 100%;
+      width: 100%;
+      margin-bottom: 50px; /* News, career 칸 아래 여백 입력*/
+      padding: 0;
+    }
+    /* 두번째 li 오른쪽 칸막이 제거 */
+    .content_summary .summary_container:after{
+      display: none;
+    }
+    
+    .service_list_container li.service_thumbnail_box {
+    width: 100%;
+    flex-basis: 100%;
+    }
+    
+    .content_support ul.support_list_container {
+      flex-wrap: wrap;
+    }
+    .content_support li.support_list_box {
+      width: 100%;
+      flex-basis: 100%;
+    }
+    .content_support li.support_list_box::after {
+    display: none;
+    }
+  
+  }/* // @media(max-width:359.98px)*/
